@@ -4,7 +4,7 @@ LRAPMut is a germline small variant caller for long-reads.
 # Usage
 ## General Usage
 ```
-python ./lrapmut.py \
+./lrapmut.bin \
     --bam_fn=${BAM} \
     --ref_fn=${REF} \
     --threads=${THREADS} \  		     
