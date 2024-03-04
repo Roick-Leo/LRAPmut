@@ -67,3 +67,17 @@ cd /path/to/genetic_maps_dir
 wget -c https://raw.githubusercontent.com/odelaneau/shapeit4/master/maps/genetic_maps.b38.tar.gz
 tar -xzvf file.tar.gz
 ```
+
+# Final comparison
+```
+mkdir -p /path/to/hppy_output_dir
+hap.py \
+/path/to/benchmark/GRCh38/HG002_GRCh38_1_22_v4.2.1_benchmark.vcf.gz \
+/path/to/LRAPmut/Final_merged.vcf.gz \
+-f /path/to/benchmark/GRCh38/HG002_GRCh38_1_22_v4.2.1_benchmark_noinconsistent.bed \
+-r /path/to/reference/hg38_noalt_withrandom/hg38.fa \
+-o /path/to/hppy_output_dir \
+--engine=vcfeval \
+--threads=15 \
+--pass-only
+```
