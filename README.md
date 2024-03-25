@@ -2,9 +2,18 @@
 LRAPMut is a germline small variant caller for long-reads. 
 
 # Install
+## Step1 configure the conda source
+```
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+conda config --set show_channel_urls yes
+```
+## Step2 install LRAPmut
 ```
 conda create -n LRAPmut
-conda install -c bioconda bcftools samtools clair3 python==3.9.0 -y
+conda activate LRAPmut
+conda install -c bioconda -c conda-forge bcftools=1.17 samtools clair3=1.0.4 python=3.9.0 -y
 git clone https://github.com/Roick-Leo/LRAPmut.git
 chmod -R a+x ./LRAPmut
 ```
